@@ -1,9 +1,10 @@
-# Topic-Modeling-Techniques-
-#### NLP Topic Modeling Techniques (LDA, LSA &amp; BERTopic) 
+# Topic Modeling 
+
 
 
 In text mining, we often have collections of documents, such as blog posts or news articles, that we’d like to divide into natural groups so that we can understand them separately. Topic modeling is a method for unsupervised classification of such documents, similar to clustering on numeric data, which finds natural groups of items even when we’re not sure what we’re looking for.
 
+## A Topic Modeling Comparison Between LDA, LSA, and BERTopic to Demystify Transcripts of a Recorded Session
 
 If there is one phrase that we will not forget long
 after 2020, it is “stay at home, stay safe.” The
@@ -52,3 +53,45 @@ LSA is a popular dimensionality-reduction
 technique that follows the same method as Singular
 Value Decomposition (SVD), and BERTopic uses
 an embedding approach.
+
+## Data Collection and Preprocessing
+
+For familiarization of the different topic modeling
+techniques and setting a benchmark for a common
+dataset, I used the well-known 20 Newsgroups
+dataset. The 20 Newsgroups dataset is a collection
+of approximately 20,000 newsgroup documents,
+partitioned (nearly) evenly across 20 different
+newsgroups. The 20 newsgroups collection has
+become a popular dataset for experiments in text
+applications of machine learning techniques, such
+as text classification and text clustering.
+The next dataset (tedtalk_corpus dataset) was
+created for the purpose of this research. It is a
+transcript from a recorded session between an
+interviewer and Bill Gates. The subject of this
+interview, taken by the title, is: “The innovations
+we need to avoid a climate disaster” (the full
+interview is available at
+https://www.ted.com/talks/bill_gates_the_innovations_we_need_to_avoid_a_climate_disaster?language=en). Using the Google Cloud speech-to-text API
+and implementation in python I was able to create a
+transcript of the recorded session. That transcript
+was then sliced into documents (sentences) to
+create the desired corpus for the implementation of
+the different topic models.
+On both datasets, text preprocessing was done
+using NLP modules in python. More precisely,
+stopwords were excluded, irrelevant text (e.g.,
+numbers, abbreviations, and unknown characters)
+was removed, and tokenization was performed.
+Following this step, bigram (and trigram) and
+lemmatization were then conducted. The former
+process is combining two words (or three words in
+the case of trigram) frequently occurring together
+in the document to a single term (e.g., ‘oil leak’ to
+‘oil_leak’), whereas the latter used to remove
+inflectional endings and to return a word to its base
+form (e.g., investigating to investigate). Lastly, the
+text was converted into term frequency-inversedocument frequency (TF-IDF) weight for
+information retrieval based on the importance of a
+keyword.
