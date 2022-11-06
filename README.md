@@ -44,7 +44,7 @@ corpus of documents (small dataset of the
 transcripts taken from the recorded session), this
 study thus aims to evaluate and compare the
 performance of three topic modeling techniques,
-namely, LDA, LSA, and BERTopic on a common
+namely, Latent Dirichlet Allocation (LDA), Latent Semantic Analysis (LSA), and BERTopic on a common
 dataset (20 Newsgroups) and on the recorded
 session transcripts corpus.
 
@@ -92,6 +92,6 @@ in the document to a single term (e.g., ‘oil leak’ to
 ‘oil_leak’), whereas the latter used to remove
 inflectional endings and to return a word to its base
 form (e.g., investigating to investigate). Lastly, the
-text was converted into term frequency-inversedocument frequency (TF-IDF) weight for
+text was converted into term frequency-inverse document frequency (TF-IDF) weight for
 information retrieval based on the importance of a
 keyword.
